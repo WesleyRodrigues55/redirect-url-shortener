@@ -12,29 +12,29 @@ Projeto feito no Curso Gratuito de Java da Rocketseat, que aconteceu entre 18/11
 - **`CreateUrlLambda/`**: Contém a primeira função Lambda responsável por salvar as informações da requisição e gerar um código único.
 
 Exemplo do `body` da requisição:
-```bash
-{
-	"originalUrl": "um link qualquer, exemplo: https://www.google.com.br/",
-	"expirationTime": "tempo para expiração em segundos, exemplo: 1732208836"
-}
-```
-```bash
-    "originalUrl" type String
-    "expirationTime" type long
-```
+   ```bash
+   {
+      "originalUrl": "um link qualquer, exemplo: https://www.google.com.br/",
+      "expirationTime": "tempo para expiração em segundos, exemplo: 1732208836"
+   }
+   ```
+   ```bash
+   "originalUrl" type String
+   "expirationTime" type long
+   ```
 
 Exemplo da reposta da requição `POST`:
-```bash
-{
-	"code": "1f5f981b"
-}
+   ```bash
+   {
+      "code": "1f5f981b"
+   }
 ```
 - **`RedirectUrlShortener/`**: Contém a segunda função Lambda responsável por capturar o código gerado pela função Lambda `CreateUrlLambda` e fazer uma requisição em `GET /{urlCode}`.
 
 Exemplo:
-```bash
-https://minhaapi.com/{urlcode}
-```
+   ```bash
+   https://minhaapi.com/{urlcode}
+   ```
 
 A resposta da requisição é o redirecionamento direto do link registrado.
 
